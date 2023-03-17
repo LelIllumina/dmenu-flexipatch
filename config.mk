@@ -41,3 +41,4 @@ LDFLAGS  = $(LIBS)
 # compiler and linker
 CC = ccache clang
 CXX = ccache clang++
+LD=ld.ldd
