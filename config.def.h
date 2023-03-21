@@ -16,7 +16,7 @@ static int instant = 0;                     /* -n  option; if 1, selects matchin
 #endif // INSTANT_PATCH
 #if CENTER_PATCH
 static int center = 1;                      /* -c  option; if 0, dmenu won't be centered on the screen */
-static int min_width = 500;                 /* minimum width when centered */
+static int min_width = 700;                 /* minimum width when centered */
 #endif // CENTER_PATCH
 #if BARPADDING_PATCH
 static const int vertpad = 10;              /* vertical padding of bar */
@@ -35,7 +35,7 @@ static char *fonts[] =
 static const char *fonts[] =
 #endif // XRESOURCES_PATCH
 {
-	"Barlow:style=Regular:antialias=true:autohint=true"
+	"Barlow:style=Regular:antialias=true:autohint=true:size=15"
 };
 #endif // PANGO_PATCH
 #if MANAGED_PATCH
@@ -88,18 +88,18 @@ const
 #endif // XRESOURCES_PATCH
 char *colors[][2] = {
 	/*               fg         bg       */
-	[SchemeNorm] = { "#bbbbbb", "#222222" },
-	[SchemeSel]  = { "#eeeeee", "#005577" },
-	[SchemeOut]  = { "#000000", "#00ffff" },
+	[SchemeNorm] = { "#cdd6f4", "#1e1e2e" },
+	[SchemeSel]  = { "#1e1e2e", "#cba6f7" },
+	[SchemeOut]  = { "#000000", "#cba6f7" },
 	#if BORDER_PATCH
-	[SchemeBorder] = { "#000000", "#005577" },
+	[SchemeBorder] = { "#000000", "#cba6f7" },
 	#endif // BORDER_PATCH
 	#if MORECOLOR_PATCH
 	[SchemeMid]  = { "#eeeeee", "#770000" },
 	#endif // MORECOLOR_PATCH
 	#if HIGHLIGHT_PATCH || FUZZYHIGHLIGHT_PATCH
-	[SchemeSelHighlight]  = { "#ffc978", "#005577" },
-	[SchemeNormHighlight] = { "#ffc978", "#222222" },
+	[SchemeSelHighlight]  = { "#eba0ac", "#f5e0dc" },
+	[SchemeNormHighlight] = { "#eba0ac", "#1e1e2e" },
 	#endif // HIGHLIGHT_PATCH | FUZZYHIGHLIGHT_PATCH
 	#if HIGHPRIORITY_PATCH
 	[SchemeHp]   = { "#bbbbbb", "#333333" },
@@ -139,7 +139,7 @@ static const char worddelimiters[] = " ";
 
 #if BORDER_PATCH
 /* Size of the window border */
-static unsigned int border_width = 0;
+static unsigned int border_width = 10;
 #endif // BORDER_PATCH
 
 #if PREFIXCOMPLETION_PATCH
